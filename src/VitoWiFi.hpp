@@ -44,10 +44,10 @@ class VitoWiFiClass {
   VitoWiFiClass();
   ~VitoWiFiClass();
 #ifdef ARDUINO_ARCH_ESP32
-  void setup(HardwareSerial* serial, int8_t rxPin, int8_t txPin);
+  void setup(Stream* serial, int8_t rxPin, int8_t txPin);
 #endif
 #ifdef ESP8266
-  void setup(HardwareSerial* serial);
+  void setup(Stream* serial);
 #endif
   void loop();
   void setGlobalCallback(Callback globalCallback);

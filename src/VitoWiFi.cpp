@@ -39,13 +39,13 @@ VitoWiFiClass<P>::~VitoWiFiClass() {
 
 #ifdef ARDUINO_ARCH_ESP32
 template <class P>
-void VitoWiFiClass<P>::setup(HardwareSerial* serial, int8_t rxPin, int8_t txPin) {
+void VitoWiFiClass<P>::setup(Stream* serial, int8_t rxPin, int8_t txPin) {
   _optolink.begin(serial, rxPin, txPin);
 }
 #endif
 #ifdef ESP8266
 template <class P>
-void VitoWiFiClass<P>::setup(HardwareSerial* serial) {
+void VitoWiFiClass<P>::setup(Stream* serial) {
   _optolink.begin(serial);
 }
 #endif
